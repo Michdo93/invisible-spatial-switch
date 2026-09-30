@@ -1,0 +1,82 @@
+{
+  "mqtt": {
+    "broker": "192.168.1.100",
+    "port": 1883,
+    "base_topic": "invisible-spatial-switch",
+    "keepalive": 60
+  },
+  "web": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "kinect": {
+    "driver": "libfreenect",
+    "width": 640,
+    "height": 480
+  },
+  "zones": {
+    "Light_Switch": {
+      "type": "switch",
+      "mode": "toggle",
+      "pressed": "ON/OFF",
+      "x_min": 50,
+      "x_max": 150,
+      "y_min": 100,
+      "y_max": 200,
+      "z_min": 1150,
+      "z_max": 1250,
+      "pixel_threshold": 300
+    },
+    "Roller_Shutter_Up": {
+      "type": "switch",
+      "mode": "hold",
+      "pressed": "UP/STOP",
+      "x_min": 180,
+      "x_max": 250,
+      "y_min": 100,
+      "y_max": 150,
+      "z_min": 1150,
+      "z_max": 1250,
+      "pixel_threshold": 200
+    },
+    "Door_Bell_Pulse": {
+      "type": "switch",
+      "mode": "pulse",
+      "pressed": "RING",
+      "x_min": 180,
+      "x_max": 250,
+      "y_min": 170,
+      "y_max": 220,
+      "z_min": 1150,
+      "z_max": 1250,
+      "pixel_threshold": 200
+    },
+    "Dimmer_Slider": {
+      "type": "slider",
+      "direction": "horizontal",
+      "min_value": 0,
+      "max_value": 100,
+      "x_min": 280,
+      "x_max": 450,
+      "y_min": 100,
+      "y_max": 150,
+      "z_min": 1150,
+      "z_max": 1250,
+      "pixel_threshold": 150
+    },
+    "Color_Picker": {
+      "type": "color",
+      "color_system": "hsb",
+      "degree_offset": 0,
+      "h_flip": false,
+      "v_flip": false,
+      "x_min": 480,
+      "x_max": 580,
+      "y_min": 100,
+      "y_max": 200,
+      "z_min": 1150,
+      "z_max": 1250,
+      "pixel_threshold": 200
+    }
+  }
+}
